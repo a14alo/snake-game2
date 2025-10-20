@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Snake Mini Game</title>
-<link rel="stylesheet" href="style.css">
-<meta name="apple-mobile-web-app-title" content="Snake Game">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="theme-color" content="#000000">
-<link rel="apple-touch-icon" href="icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game - Farcaster Mini App</title>
+
+  <style>
+    body {
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    #gameCanvas {
+      border: 2px solid lime;
+      background: black;
+    }
+
+    #score {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
-<div id="score">Score: 0</div>
-<canvas id="gameCanvas" width="400" height="400"></canvas>
-<script src="script.js"></script>
+
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <div id="score">Score: 0</div>
+
+  <!-- 👇 Load Farcaster SDK before your script -->
+  <script src="https://unpkg.com/@farcaster/miniapp-sdk/dist/browser.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>
