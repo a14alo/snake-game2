@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  margin: 0;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+canvas {
+  background-color: #000;
+  display: block;
+  margin: auto;
+  border: 2px solid #fff;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  font-size: 18px;
+}
