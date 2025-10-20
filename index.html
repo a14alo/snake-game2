@@ -4,39 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Snake Game - Farcaster Mini App</title>
-
   <style>
     body {
-      background: #111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      background: black;
       color: white;
+      text-align: center;
       font-family: Arial, sans-serif;
       margin: 0;
+      overflow: hidden;
     }
-
-    #gameCanvas {
-      border: 2px solid lime;
-      background: black;
-    }
-
-    #score {
-      margin-top: 10px;
-      font-size: 20px;
+    canvas {
+      display: block;
+      margin: 20px auto;
+      background: #111;
+      border: 2px solid #444;
     }
   </style>
 </head>
 <body>
-
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <h1>Snake Game</h1>
   <div id="score">Score: 0</div>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
 
-  <!-- 👇 Load Farcaster SDK before your script -->
-  <script src="https://unpkg.com/@farcaster/miniapp-sdk/dist/browser.js"></script>
+  <!-- ✅ Add the Farcaster Mini App SDK before your own script -->
+  <script src="https://miniapps.farcaster.xyz/sdk/v1.js"></script>
+
+  <!-- Your own game logic -->
   <script src="script.js"></script>
-
 </body>
 </html>
