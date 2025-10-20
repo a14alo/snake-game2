@@ -1,4 +1,4 @@
-// script.js - Farcaster Mini App ready
+// script.js - Farcaster Mini App ready (final working version)
 
 window.onload = function() {
     const canvas = document.getElementById('gameCanvas');
@@ -83,11 +83,24 @@ window.onload = function() {
     // Start game loop
     requestAnimationFrame(loop);
 
-    // ✅ Farcaster ready call (hides splash screen)
-    if (window.sdk && window.sdk.actions && window.sdk.actions.ready) {
-        window.sdk.actions.ready();
-        console.log("Farcaster ready called!");
-    } else {
-        console.log("Farcaster SDK not detected or already ready.");
+    // ✅ Safely call Farcaster SDK ready (waits until available)
+    function waitForFarcasterSDK(attempts = 0) {
+        if (window.sdk && window.sdk.actions && typeof window.sdk.actions.ready === 'function') {
+            try {
+                window.sdk.actions.ready();
+                console.log("✅ Farcaster SDK ready called successfully!");
+            } catch (err) {
+                console.error("❌ Error calling Farcaster SDK ready:", err);
+            }
+        } else {
+            if (attempts < 20) { // retry up to 10 seconds
+                console.log("⏳ Waiting for Farcaster SDK to load...");
+                setTimeout(() => waitForFarcasterSDK(attempts + 1), 500);
+            } else {
+                console.warn("⚠️ Farcaster SDK not detected after waiting 10s.");
+            }
+        }
     }
+
+    waitForFarcasterSDK();
 };
