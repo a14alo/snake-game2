@@ -1,8 +1,20 @@
 {
-  "name": "Snake Game",
-  "id": "snake-game",
-  "description": "A classic Snake game playable within Farcaster.",
-  "version": "1.0.0",
-  "icon": "icon.png",
-  "entry": "index.html"
+  "frame": {
+    "name": "a14alo",
+    "version": "1",
+    "iconUrl": "https://snake-game2-manifested.vercel.app/icon.png",
+    "homeUrl": "https://snake-game2-manifested.vercel.app",
+    "imageUrl": "https://snake-game2-manifested.vercel.app/image.png",
+    "splashImageUrl": "https://snake-game2-manifested.vercel.app/splash.png",
+    "splashBackgroundColor": "#6200EA",
+    "webhookUrl": "https://snake-game2-manifested.vercel.app/api/webhook",
+    "subtitle": "Classic Snake Game",
+    "description": "Classic Snake game adapted as a Farcaster Mini App",
+    "primaryCategory": "games"
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjQ1MTE5MSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDZmNDBDRWY3NTc0QkQzODI1MzYwNjhEYmVCMmQ1QjU2MjhiZEZhQTYifQ",
+    "payload": "eyJkb21haW4iOiJzbmFrZS1nYW1lMi1tYW5pZmVzdGVkLnZlcmNlbC5hcHAifQ",
+    "signature": "jzB76+J9Ok5pslVKJLROq8F5o0KfobN9/xdQi/PvdjYZ7out/fl2gd+hC5iXWBV9ARn5vAe6hV69Dc5EBxvM+hs="
+  }
 }
