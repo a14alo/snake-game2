@@ -83,7 +83,7 @@ window.onload = function() {
     // Start game loop
     requestAnimationFrame(loop);
 
-    // ✅ Safely call Farcaster SDK ready (waits until available)
+    // ✅ Safely call Farcaster SDK ready
     function waitForFarcasterSDK(attempts = 0) {
         if (window.sdk && window.sdk.actions && typeof window.sdk.actions.ready === 'function') {
             try {
@@ -93,7 +93,7 @@ window.onload = function() {
                 console.error("❌ Error calling Farcaster SDK ready:", err);
             }
         } else {
-            if (attempts < 20) { // retry up to 10 seconds
+            if (attempts < 20) { // retry for up to 10 seconds
                 console.log("⏳ Waiting for Farcaster SDK to load...");
                 setTimeout(() => waitForFarcasterSDK(attempts + 1), 500);
             } else {
