@@ -83,8 +83,11 @@ window.onload = function() {
     // Start game loop
     requestAnimationFrame(loop);
 
-    // Farcaster ready call (hides splash screen)
-    if (window.sdk && sdk.actions && sdk.actions.ready) {
-        sdk.actions.ready();
+    // ✅ Farcaster ready call (hides splash screen)
+    if (window.sdk && window.sdk.actions && window.sdk.actions.ready) {
+        window.sdk.actions.ready();
+        console.log("Farcaster ready called!");
+    } else {
+        console.log("Farcaster SDK not detected or already ready.");
     }
 };
