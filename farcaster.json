@@ -1,0 +1,8 @@
+{
+  "name": "Snake Game",
+  "id": "snake-game",
+  "description": "A classic Snake game playable within Farcaster.",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "entry": "index.html"
+}
