@@ -1,0 +1,9 @@
+{
+  "name": "Snake Game",
+  "description": "Classic Snake game adapted as a Farcaster Mini App.",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "start_url": "https://snake-game2-pffy.vercel.app/index.html",
+  "author": "a14alo",
+  "display": "standalone"
+}
